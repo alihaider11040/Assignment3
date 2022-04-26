@@ -13,18 +13,18 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.model.Contact;
 //import com.example.myapplication.model.Contact;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.viewholder>{
-    String lnames[];
-    String lContact[];
+    ArrayList<Contact> contactsList;
     Context context;
-    public RecyclerViewAdapter(Context ct, String names[], String contacts[]){
-        context=ct;
-        names=lnames;
-        lContact=contacts;
+    public RecyclerViewAdapter(Context ct, ArrayList<Contact> contactsList){
+        context = ct;
+        this.contactsList = contactsList;
     }
 
     @NonNull
@@ -37,13 +37,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
-        holder.name.setText(lnames[position]);
-        holder.contact.setText(lContact[position]);
+        holder.name.setText(contactsList.get(position).getContactName());
+        holder.contact.setText(contactsList.get(position).getContactNumber());
     }
 
     @Override
     public int getItemCount() {
-        return lnames.length;
+        return contactsList.size();
     }
 
     public class viewholder extends RecyclerView.ViewHolder{

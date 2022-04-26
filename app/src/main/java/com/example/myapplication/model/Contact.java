@@ -1,6 +1,6 @@
 package com.example.myapplication.model;
 
-/*public class Contact {
+public class Contact {
 
     // For Model
     private int id;
@@ -13,6 +13,18 @@ package com.example.myapplication.model;
         this.contactNumber = contactNumber;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
     // For Database
     public static final String TABLE_NAME = "Contact";
     public static final String COLUMN_ID = "id";
@@ -20,4 +32,3 @@ package com.example.myapplication.model;
     public static final String CONTACT_NUMBER = "number";
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT DEFAULT 1," + CONTACT_NAME + " TEXT," + CONTACT_NUMBER + " TEXT UNIQUE)";
 }
-*/

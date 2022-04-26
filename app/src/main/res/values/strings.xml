@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="names">
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+    </string-array>
+    <string-array name="app_contacts">
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+        <item>s5</item>
+    </string-array>
+</resources>
